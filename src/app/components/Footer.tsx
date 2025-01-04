@@ -1,5 +1,8 @@
+'use client'
 
-import { Github, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { useState, FormEvent } from 'react'
+import { Github, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
+import toast from 'react-hot-toast'
 
 // Custom Input Component
 function CustomInput({ type = "text", placeholder, className = "", ...props }:any) {
@@ -37,6 +40,11 @@ function CustomButton({ children, className = "", ...props }:any) {
 }
 
 export default function Footer() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+
   const socialLinks = [
     {
       name: "Twitter",
@@ -57,10 +65,53 @@ export default function Footer() {
   ]
 
   const footerLinks = {
-    "Products & Services": ["MainNet", "TestNet", "Governance",],
-    "Developers": ["Documentation", "GitHub", "SDK", ],
-    "Company": ["About Us", "Careers"],
+    "Our Features": [{"name":"Request Loans","href":"/loan-request"}, {"name":"Stake","href":"/stake-loans"}, {"name":"Repayment Loans","href":"/repayment-loan"},],
+    "Developers": [{"name":"Twitter","href":"/"}, {"name":"Github","href":"https://github.com/Spydiecy/EduInfinityX/blob/main/README.md"}, {"name":"SDK","href":"https://educhain.xyz/"}, ],
+    "Company": [{"name":"About Us","href":"/about"}, {"name":"Contact us","href":"/contact"}],
    
+  }
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    
+    const formData = {
+      name,
+      email,
+      subject,
+      message
+    }
+
+    try {
+      // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint
+      let response:any = await fetch("https://send-chitkara.vercel.app/api/sendEdu", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          "name":"",
+          "email":"namanbansal102@gmail.com",
+          "subject":"",
+          "message":""
+        }),
+      })
+      response=await response.json();
+      console.log("My response is::::",response);
+      
+      if (response.success) {
+        toast.success("Message Sent Successfully")
+        // Clear form fields
+        setName('')
+        setEmail('')
+        setSubject('')
+        setMessage('')
+      } else {
+      toast.error("Failed To Send Message")
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('An error occurred. Please try again.'+error)
+    }
   }
 
   return (
@@ -97,20 +148,36 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links Sections */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category} className="space-y-6">
-              <h3 className="text-sm font-semibold uppercase tracking-wider">{category}</h3>
-              <ul className="space-y-4">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-gray-600 hover:text-emerald-400 transition-colors">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      
+  <div  className="space-y-6">
+    <h3 className="text-sm font-semibold uppercase tracking-wider">Our Features</h3>
+    <ul className="space-y-4" > {/* Add a unique key here */}
+      {footerLinks["Our Features"].map(({ name, href }) => (
+        <li key={href}>
+          <a href={href} className="text-gray-600 hover:text-emerald-400 transition-colors">
+            {name}
+          </a>
+        </li>
+      ))}
+    </ul>
+    
+  </div>
+  <div  className="space-y-6">
+    <h3 className="text-sm font-semibold uppercase tracking-wider">Our Features</h3>
+    <ul className="space-y-4" > {/* Add a unique key here */}
+      {footerLinks["Developers"].map(({ name, href }) => (
+        <li key={href}>
+          <a href={href} className="text-gray-600 hover:text-emerald-400 transition-colors">
+            {name}
+          </a>
+        </li>
+      ))}
+    </ul>
+    
+  </div>
+
+
+
         </div>
 
         {/* Contact Section */}
@@ -120,7 +187,7 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-gray-600">
                 <Mail className="h-5 w-5" />
-                <span>contact@neox.com</span>
+                <span>contact@educhain.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-600">
                 <Phone className="h-5 w-5" />
@@ -128,25 +195,44 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3 text-gray-600">
                 <MapPin className="h-5 w-5" />
-                <span>123 Blockchain Street, Crypto City, CC 12345</span>
+                <span>India</span>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <form className="space-y-4" >
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <h3 className="text-lg font-semibold">Send us a message</h3>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <CustomInput placeholder="Name" required />
-              <CustomInput type="email" placeholder="Email" required />
+              <CustomInput 
+                placeholder="Name" 
+                required 
+                value={name}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
+              />
+              <CustomInput 
+                type="email" 
+                placeholder="Email" 
+                required 
+                value={email}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+              />
             </div>
-            <CustomInput placeholder="Subject" required />
+            <CustomInput 
+              placeholder="Subject" 
+              required 
+              value={subject}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSubject(e.target.value)}
+            />
             <CustomTextarea 
               placeholder="Your message" 
               className="min-h-[120px]" 
               required 
+              value={message}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
             />
             <CustomButton
+              type="submit"
               style={{
                 background: "linear-gradient(135deg, rgb(45, 206, 137) 0%, rgb(0, 147, 233) 100%)",
               }}
@@ -160,7 +246,7 @@ export default function Footer() {
         <div className="mt-16 border-t border-gray-200 pt-8">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <p className="text-sm text-gray-600">
-              © {new Date().getFullYear()} Neo X. All rights reserved.
+              © {new Date().getFullYear()} EduInfinityX. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-sm text-gray-600 hover:text-emerald-400">
@@ -179,3 +265,4 @@ export default function Footer() {
     </footer>
   )
 }
+

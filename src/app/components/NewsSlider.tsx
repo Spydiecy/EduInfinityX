@@ -69,7 +69,7 @@ export default function NewsSlider() {
                 className="w-1/3 flex-shrink-0 px-3 "
                 style={{ flex: "0 0 33.333%" }}
               >
-                <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-transform duration-300 hover:scale-105 h-[400px] flex flex-col justify-between">
+                <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-transform duration-300 hover:scale-105 h-[340px] flex flex-col justify-between">
                   <div className="absolute right-0 top-0 h-32 w-32 opacity-10">
                     <div
                       className="h-full w-full"
@@ -94,9 +94,9 @@ export default function NewsSlider() {
                     </div>
                     <h3 className="mb-4 text-xl font-semibold ">{item.title}</h3>
                     <div className="flex gap-2 flex-col mb-9">
-                      <img className=" w-40 rounded-lg" src={item.image} alt="" />
+                      <img className=" rounded-lg" src={item.image} alt="" />
                     </div>
-                    
+                  
                   </div>
                       
                 </div>
