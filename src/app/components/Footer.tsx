@@ -76,7 +76,7 @@ export default function Footer() {
               }}
               
               >
-                NeoxLifeChain 
+                EduInfinityX
 
               </div>
             <p className="text-gray-600 max-w-xs">

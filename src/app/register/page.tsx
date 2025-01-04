@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { getContractFunctions } from '@/lib/contract';
-
+import '../styles/custom.css';
 export default function Register() {
     const [loading, setLoading] = useState(true);
     const router = useRouter();
@@ -51,7 +51,9 @@ export default function Register() {
         }
     }
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <div className='h-[90vh] w-[90vw] flex items-center justify-center'> 
+    <div className="spinner"></div>
+    </div>;
     if (isRegistered) return <div>You are already Registered!</div>
 
     return (

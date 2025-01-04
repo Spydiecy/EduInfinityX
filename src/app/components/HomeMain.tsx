@@ -47,13 +47,13 @@ export default function HomeMain() {
   
             {/* Hero Text */}
             <p className="font-bold text-5xl lg:text-[90px] flex flex-col">
-              <span className="whitespace-nowrap">New Life</span>
-              <span>It's Neo X.</span>
+              <span className="whitespace-nowrap">Learn. Own. Earn.</span>
+              <span>It's EduChain</span>
             </p>
   
             {/* Description */}
             <p className="font-medium lg:text-lg text-[#404056] max-w-md">
-              NeoxLifeChain is a Secure Based Electronic Health Management System To Manange Health Records Securely and Access Quickly.</p>
+            A Layer 3 platform built on Arbitrum Orbit, that's home to DApps spanning learning, DeFi, education finance, for education loans to institutions. </p>
   
             {/* CTA Button */}
             <div className="flex items-center gap-8">

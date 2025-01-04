@@ -1,0 +1,59 @@
+@keyframes cursorGlow {
+    0% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+  }
+  
+  .cursor-glow {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4ade80;
+    position: fixed;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 9999;
+    animation: cursorGlow 2s infinite;
+  }
+  
+  .gradient-box {
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(59, 130, 246, 0.1));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .terms-and-conditions {
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+  }
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1); /* Light border */
+    border-top: 5px solid #3498db; /* Blue top border */
+    border-radius: 50%; /* Make it circular */
+    animation: spin 1s linear infinite; /* Smooth rotation */
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
