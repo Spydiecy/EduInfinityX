@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import { getWeb3Provider, getContractFunctions } from '@/lib/contract';
 import { ethers } from 'ethers';
 import Navbar from './components/Navbar';
+import HomeM from './components/HomeMain';
+import HomeMain from './components/HomeMain';
 
 export default function Home() {
     const [connecting, setConnecting] = useState(false);
@@ -45,7 +47,8 @@ export default function Home() {
 
     return (
         <main className="min-h-screen bg-gray-100">
-           <Navbar></Navbar>
+          
+         <HomeMain></HomeMain>
         </main>
     );
 }
