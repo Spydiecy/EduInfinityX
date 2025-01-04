@@ -1,27 +1,33 @@
-  export default function AboutSection() {
+import edu1 from "../../../public/edu-learn1.jpg";
+import edu2 from "../../../public/edu-learn2.jpg";
+import edu3 from "../../../public/edu-learn3.jpg";
+import edu4 from "../../../public/edu-learn4.jpg";
+import edu5 from "../../../public/edulearn.jpg";
+export default function AboutSection() {
+
   const partners = [
     {
       name: "Prodigy",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Prodigy_Education_logo.png",
+      logo: edu1.src,
     },
     {
       name: "Hotmart",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Logo_hotmart.png",
+      logo: edu2.src,
     },
     {
       name: "Boehringer IngelHeim",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlk9KgG5PCl-5yRfS5DVtVI0JrU6d2F43jhw&s",
+      logo: edu3.src,
     },
   ]
 
   const platinumSponsors = [
     {
       name: "Unacademy",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZOyEE_WL8561aERBtT8enfFvBKrkv1l0egQ&s",
+      logo: edu4.src,
     },
     {
       name: "Toppr",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Toppr_logo.png",
+      logo: edu5.src,
     },
   ]
 
@@ -39,9 +45,9 @@
               <span className="text-2xl">❤️</span>
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">Free & open source</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">To help Students</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Our platform is MIT Licensed and will always be free and open source.
+            Our platform is MIT Licensed 
             This is made possible by our contributors and these companies:
           </p>
         </div>
@@ -79,7 +85,7 @@
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-8 w-auto mx-auto relative z-10"
+                    className="h-20 w-auto mx-auto relative z-10"
                   />
                 </div>
               ))}

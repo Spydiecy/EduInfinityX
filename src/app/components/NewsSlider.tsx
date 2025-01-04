@@ -8,27 +8,27 @@ export default function NewsSlider() {
   const news = [
     {
       date: "27/07/2024",
-      title: "EduInfinity A New Brand for a Brand New Era",
+      title: "EduInfinity A New Brand for a Brand",
       link: "#",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_T5mpDJY0gc-GybgfQ0CJLLKQK6vjHB1wWw&s",
     },
     {
       date: "25/07/2024",
-      title: "EduInfinity launches $20 million Elevate funding program for Neo X",
+      title: "EduInfinity launches $20 million",
       link: "#",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://pbs.twimg.com/media/GXzx8JJXkAAZ4UC.jpg",
     },
     {
       date: "25/07/2024",
       title: "EduInfinity Launches",
       link: "#",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://static.bittime.com/cms-static/upload/Open_Campus_Luncurkan_Hackathon_EDU_Chain_ae422ecbcb.webp",
     },
     {
       date: "18/07/2024",
-      title: "EDU Launches the EduChain Gamma TestNet",
+      title: "EDU Launches the EduChain Gamma ",
       link: "#",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://framerusercontent.com/images/rNyP2L3AnAx6j0VBAic7IcB4.png",
     },
   ]
 
@@ -49,7 +49,7 @@ export default function NewsSlider() {
   }, [])
 
   return (
-    <div className="max-w-7xl mx-auto px-4 ">
+    <div className="max-w-7xl mx-auto px-4 my-20">
       <div className="space-y-4 mb-12">
         <h1 className="text-5xl font-bold">Latest News</h1>
         <p className="text-xl text-gray-600">
@@ -60,16 +60,16 @@ export default function NewsSlider() {
       <div className="relative">
         <div className="overflow-hidden">
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            className="flex transition-transform duration-500  ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
           >
             {news.map((item, index) => (
               <div
                 key={index}
-                className="w-1/3 flex-shrink-0 px-3"
+                className="w-1/3 flex-shrink-0 px-3 "
                 style={{ flex: "0 0 33.333%" }}
               >
-                <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-transform duration-300 hover:scale-105 h-[300px] flex flex-col justify-between">
+                <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-transform duration-300 hover:scale-105 h-[400px] flex flex-col justify-between">
                   <div className="absolute right-0 top-0 h-32 w-32 opacity-10">
                     <div
                       className="h-full w-full"
@@ -92,17 +92,13 @@ export default function NewsSlider() {
                       />
                       <span className="text-sm text-gray-500">{item.date}</span>
                     </div>
-                    <h3 className="mb-4 text-xl font-semibold line-clamp-3">{item.title}</h3>
-                    <div className="mt-auto">
-                      <a
-                        href={item.link}
-                        className="inline-flex items-center text-gray-500 hover:text-emerald-400"
-                      >
-                        Read More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
+                    <h3 className="mb-4 text-xl font-semibold ">{item.title}</h3>
+                    <div className="flex gap-2 flex-col mb-9">
+                      <img className=" w-40 rounded-lg" src={item.image} alt="" />
                     </div>
+                    
                   </div>
+                      
                 </div>
               </div>
             ))}

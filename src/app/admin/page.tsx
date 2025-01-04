@@ -7,7 +7,7 @@ import type { LoanDetails } from '@/types/student';
 import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import { User, DollarSign, Award, Play, Pause } from 'lucide-react';
-
+import "../styles/custom.css"
 interface PendingLoan extends LoanDetails {
     loanId: number;
 }
@@ -102,7 +102,7 @@ export default function AdminDashboard() {
         }
     }
 
-    if (loading) return <div className="flex justify-center items-center h-screen">Loading...</div>;
+    if (loading) return <div className="flex justify-center items-center h-screen"><div className="spinner"></div></div>;
 
     return (
         <div className="min-h-screen p-8 bg-gradient-to-br bg-gray-200 text-black">
