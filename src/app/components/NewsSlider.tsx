@@ -8,25 +8,25 @@ export default function NewsSlider() {
   const news = [
     {
       date: "27/07/2024",
-      title: "Neo X: A New Brand for a Brand New Era",
+      title: "EduInfinity A New Brand for a Brand New Era",
       link: "#",
       image: "/placeholder.svg?height=400&width=600",
     },
     {
       date: "25/07/2024",
-      title: "Neo launches $20 million Elevate funding program for Neo X",
+      title: "EduInfinity launches $20 million Elevate funding program for Neo X",
       link: "#",
       image: "/placeholder.svg?height=400&width=600",
     },
     {
       date: "25/07/2024",
-      title: "Neo X MainNet Launches",
+      title: "EduInfinity Launches",
       link: "#",
       image: "/placeholder.svg?height=400&width=600",
     },
     {
       date: "18/07/2024",
-      title: "Neo Launches the Neo X Gamma TestNet",
+      title: "EDU Launches the EduChain Gamma TestNet",
       link: "#",
       image: "/placeholder.svg?height=400&width=600",
     },
@@ -51,7 +51,7 @@ export default function NewsSlider() {
   return (
     <div className="max-w-7xl mx-auto px-4 ">
       <div className="space-y-4 mb-12">
-        <h1 className="text-5xl font-bold">Latest news.</h1>
+        <h1 className="text-5xl font-bold">Latest News</h1>
         <p className="text-xl text-gray-600">
           Let's catch you up on what is happening in the Neo X ecosystem.
         </p>

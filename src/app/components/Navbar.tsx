@@ -101,16 +101,16 @@ export default function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-6">
               <a
-                href="/viewHospital"
+                href="/admin"
                 className="text-lg text-neutral-300 transition-colors hover:text-green-400 hover:[text-shadow:0_0_10px_#c084fc]"
               >
-                Courses
+                Admin
               </a>
               <a
-                href="/add-hospital"
+                href="/loan-request"
                 className="text-lg text-neutral-300 transition-colors hover:text-green-400 hover:[text-shadow:0_0_10px_#c084fc]"
               >
-                Register
+                Loan Request  
               </a>
               
               {/* Plugins Dropdown */}
@@ -139,22 +139,22 @@ export default function Navbar() {
                 {activeDropdown === 'plugins' && (
                   <div className="absolute right-0  w-48 rounded-md bg-neutral-900 py-2 shadow-lg ring-1 ring-black ring-opacity-5 z-50">
                     <a
-                      href="/userProfile"
+                      href="/stake-loans"
                       className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
                     >
-                      Apollo Hospital
+                      Stake Loans
+                    </a>
+                    <a
+                      href="/repayment-loan"
+                      className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
+                    >
+                      Repayment Loan
                     </a>
                     <a
                       href="/userProfile"
                       className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
                     >
-                      Max Hospital
-                    </a>
-                    <a
-                      href="/userProfile"
-                      className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
-                    >
-                      Neo Hospital
+                      ---------
                     </a>
                   </div>
                 )}
@@ -189,7 +189,7 @@ export default function Navbar() {
                       href="/register-patient"
                       className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
                     >
-                      Add Record
+                      About
                     </a>
                     <a
                       href="#"

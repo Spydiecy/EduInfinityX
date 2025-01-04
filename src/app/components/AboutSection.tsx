@@ -1,12 +1,12 @@
   export default function AboutSection() {
   const partners = [
     {
-      name: "StackBlitz",
-      logo: "https://vite.dev/stackblitz.svg",
+      name: "Prodigy",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Prodigy_Education_logo.png",
     },
     {
-      name: "Labs",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Lilly-Logo.svg/640px-Lilly-Logo.svg.png",
+      name: "Hotmart",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Logo_hotmart.png",
     },
     {
       name: "Boehringer IngelHeim",
@@ -16,12 +16,12 @@
 
   const platinumSponsors = [
     {
-      name: "Storyblok",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqL5oEPnKruUYGtAGLvOEePluxCtLq-5G2NQ&s",
+      name: "Unacademy",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZOyEE_WL8561aERBtT8enfFvBKrkv1l0egQ&s",
     },
     {
-      name: "Bit",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Cipla_logo.svg/2560px-Cipla_logo.svg.png",
+      name: "Toppr",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Toppr_logo.png",
     },
   ]
 

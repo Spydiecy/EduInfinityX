@@ -58,11 +58,11 @@ export default function HomeMain() {
             {/* CTA Button */}
             <div className="flex items-center gap-8">
               <a 
-                href="/viewHospital" 
+                href="/dashboard" 
                 target="_blank"
                 className="bg-black font-semibold py-3 px-5 text-white rounded-full hover:bg-gray-900 transition-colors"
               >
-                View Hospitals
+                Student Dashboard
               </a>
             </div>
           </div>

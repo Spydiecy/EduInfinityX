@@ -6,11 +6,11 @@ export default function HomeCardsDesign() {
       <div className="space-y-4 mb-12">
         <h1 className="text-5xl font-bold">Resources.</h1>
         <p className="text-xl text-gray-600">
-          Find resources that will help you navigate, use, and build on the Neo X network.
+          Find resources that will help you navigate, use, and build on the Edu Chain network.
         </p>
         <div className="flex gap-4 pt-4">
           <button className="px-6 py-2 rounded-full border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white transition-colors">
-            Add Neo X Mainnet
+            Add Edu Chain Mainnet
           </button>
           <button className="px-6 py-2 rounded-full bg-emerald-400 text-white hover:bg-emerald-500 transition-colors">
             Go to Docs
@@ -31,7 +31,7 @@ export default function HomeCardsDesign() {
           },
           {
             title: "Bridge",
-            description: "Electronic Health Management Easily by Spenign Less Amount Of Gas.",
+            description: "Electronic Loan Management Easily by Spenign Less Amount Of Gas.",
             icon: (
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
