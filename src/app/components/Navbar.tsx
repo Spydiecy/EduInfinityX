@@ -151,10 +151,10 @@ export default function Navbar() {
                       Repayment Loan
                     </a>
                     <a
-                      href="/userProfile"
+                      href="/dashboard"
                       className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
                     >
-                      ---------
+                      Dashboard
                     </a>
                   </div>
                 )}
