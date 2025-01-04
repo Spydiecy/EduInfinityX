@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { ethers } from 'ethers'
 import { getWeb3Provider, getContractFunctions } from '@/lib/contract';
 import { useRouter } from 'next/navigation';
+import toast from 'react-hot-toast';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,9 +38,11 @@ export default function Navbar() {
           } catch (error: any) {
                console.error("Connection error:", error);
                if (error.code === 4001) {
-                  alert("User rejected the request")
+                toast.error("User rejected the request")
+                
               } else {
-                   alert('Failed to connect. Please check your wallet.')
+                toast.error("Failed to connect. Please check your wallet.")
+              
               }
   
           } finally {

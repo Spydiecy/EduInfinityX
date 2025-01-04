@@ -5,6 +5,7 @@ import { getContractFunctions } from '@/lib/contract';
 import { useRouter } from 'next/navigation';
 import { ethers } from 'ethers';
 import type { LoanDetails } from '@/types/student';
+import toast from 'react-hot-toast';
 
 interface  PendingLoan extends LoanDetails {
     loanId: number;
@@ -65,7 +66,8 @@ export default function AdminDashboard() {
               setPendingLoans(allLoans);
           } catch (error) {
               console.error("Failed to fetch pending loans:", error);
-              alert('Failed to fetch pending loans.');
+              
+              toast.error('Failed to fetch pending loans.');
           } finally {
               setLoading(false);
           }
@@ -76,11 +78,11 @@ export default function AdminDashboard() {
             setLoading(true);
             const contract = await getContractFunctions();
             await contract.approveLoan(loanId, amount);
-            alert('Loan approved');
+            toast.error('Loan approved');
             await fetchPendingLoans();
         } catch (error: any) {
             console.error("Approve loan error:", error);
-             alert('Failed to approve loan');
+             toast.error('Failed to approve loan');
         } finally {
              setLoading(false);
         }
@@ -92,10 +94,10 @@ export default function AdminDashboard() {
             setLoading(true);
             const contract = await getContractFunctions();
             await contract.updatePerformance(studentAddress, Number(courseId), Number(score));
-            alert('Performance updated');
+            toast.error('Performance updated');
         } catch (error) {
              console.error("Update performance error:", error);
-             alert('Failed to update performance');
+             toast.error('Failed to update performance');
         } finally {
             setLoading(false);
         }
@@ -181,10 +183,10 @@ export default function AdminDashboard() {
                                           setLoading(true);
                                         const contract = await getContractFunctions();
                                         await contract.pause();
-                                        alert("Platform paused");
+                                        toast.error("Platform paused");
                                     }catch(error){
                                         console.error(error)
-                                        alert("Pause failed");
+                                        toast.error("Pause failed");
                                     } finally {
                                         setLoading(false);
                                     }
@@ -200,10 +202,10 @@ export default function AdminDashboard() {
                                       setLoading(true);
                                       const contract = await getContractFunctions();
                                       await contract.unpause();
-                                       alert("Platform unpaused");
+                                       toast.error("Platform unpaused");
                                   }catch(error){
                                       console.error(error);
-                                       alert("Unpause failed");
+                                       toast.error("Unpause failed");
                                   } finally {
                                         setLoading(false);
                                     }

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { getContractFunctions } from '@/lib/contract';
 import '../styles/custom.css';
+import toast from 'react-hot-toast';
 export default function Register() {
     const [loading, setLoading] = useState(true);
     const router = useRouter();
@@ -46,7 +47,8 @@ export default function Register() {
             router.push('/dashboard');
         } catch (error) {
             console.error("Registration error:", error);
-            alert('Registration failed');
+            toast.error("Registration Failed")
+        
             setLoading(false);
         }
     }

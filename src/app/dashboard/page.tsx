@@ -5,6 +5,7 @@ import { getContractFunctions } from '@/lib/contract';
 import type { StudentDetails, LoanDetails } from '@/types/student';
 import { BookOpen, DollarSign, TrendingUp, Award } from 'lucide-react';
 import '../styles/custom.css';
+import toast from 'react-hot-toast';
 
 export default function Dashboard() {
  const [loading, setLoading] = useState(false);
@@ -73,7 +74,7 @@ export default function Dashboard() {
      await loadUserData(address);
    } catch (error) {
      console.error('Action failed:', error);
-     alert('Operation failed');
+     toast.error("Unhandled Error From Backend")
    } finally {
      setLoading(false);
    }

@@ -7,6 +7,7 @@ import { ethers } from 'ethers';
 import Navbar from './components/Navbar';
 import HomeM from './components/HomeMain';
 import HomeMain from './components/HomeMain';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Home() {
     const [connecting, setConnecting] = useState(false);
@@ -35,9 +36,11 @@ export default function Home() {
         } catch (error: any) {
              console.error("Connection error:", error);
              if (error.code === 4001) {
-                alert("User rejected the request")
+                toast.error("User rejected the request")
+                
             } else {
-                 alert('Failed to connect. Please check your wallet.')
+                toast.error("Failed To Connect.Please Check Your Wallet")
+                
             }
 
         } finally {
@@ -47,7 +50,8 @@ export default function Home() {
 
     return (
         <main className="min-h-screen bg-gray-100">
-          
+            
+    
          <HomeMain></HomeMain>
         </main>
     );
