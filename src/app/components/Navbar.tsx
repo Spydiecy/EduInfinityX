@@ -186,16 +186,16 @@ export default function Navbar() {
                 {activeDropdown === 'resources' && (
                   <div className="absolute right-0 mt-0 w-48 rounded-md bg-neutral-900 py-2 shadow-lg ring-1 ring-black ring-opacity-5 z-50">
                     <a
-                      href="/register-patient"
+                      href="/about"
                       className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
                     >
                       About
                     </a>
                     <a
-                      href="#"
+                      href="/contact"
                       className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
                     >
-                      Blog
+                      Contact
                     </a>
                     <a
                       href="#"
