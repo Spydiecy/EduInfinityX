@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getWeb3Provider, getContractFunctions } from '@/lib/contract';
 import { ethers } from 'ethers';
+import Navbar from './components/Navbar';
 
 export default function Home() {
     const [connecting, setConnecting] = useState(false);
@@ -44,18 +45,7 @@ export default function Home() {
 
     return (
         <main className="min-h-screen bg-gray-100">
-            <div className="h-screen flex items-center justify-center">
-                <div className="bg-white p-8 rounded-lg shadow-lg w-96 text-center">
-                    <h1 className="text-3xl font-bold mb-6">EduInfinity-X</h1>
-                    <button
-                        onClick={handleConnect}
-                        disabled={connecting}
-                        className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full hover:bg-blue-700 disabled:bg-blue-300"
-                    >
-                        {connecting ? 'Connecting...' : 'Connect Wallet'}
-                    </button>
-                </div>
-            </div>
+           <Navbar></Navbar>
         </main>
     );
 }

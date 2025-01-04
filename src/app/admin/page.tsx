@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { ethers } from 'ethers';
 import type { LoanDetails } from '@/types/student';
 
-interface PendingLoan extends LoanDetails {
+interface  PendingLoan extends LoanDetails {
     loanId: number;
 }
 
