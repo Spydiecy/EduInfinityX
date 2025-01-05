@@ -3,7 +3,7 @@ import { CONTRACT_ADDRESS, CONTRACT_ABI } from '../config/contract';
 
 declare global {
   interface Window {
-    ethereum: any;
+    ethereum: ethers.providers.ExternalProvider;
   }
 }
 

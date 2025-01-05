@@ -1,5 +1,5 @@
 // src/lib/contract.ts
-import { ethers } from 'ethers';
+import { ethers, ContractTransaction  } from 'ethers';
 import { CONTRACT_ADDRESS, CONTRACT_ABI } from '../config/contract';
 import type { StudentDetails, LoanDetails } from '@/types/student';
 
@@ -16,9 +16,8 @@ export async function getContractFunctions() {
 
     return {
         // Student Registration
-        registerStudent: async () => {
-            const tx = await contract.registerStudent();
-            await tx.wait();
+        registerStudent: async (): Promise<ContractTransaction> => {
+            return contract.registerStudent();
         },
 
         // Loan Functions
@@ -46,11 +45,10 @@ export async function getContractFunctions() {
         },
 
         // Staking Functions
-        stake: async (amount: string) => {
-            const tx = await contract.stake({
+        stake: async (amount: string): Promise<ContractTransaction> => {
+            return contract.stake({
                 value: ethers.utils.parseEther(amount)
             });
-            await tx.wait();
         },
 
          // Performance Functions

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getContractFunctions } from '@/lib/contract';
 import type { StudentDetails } from '@/types/student';
-import { BookOpen, DollarSign, TrendingUp, Award, RefreshCw, User } from 'lucide-react';
+import { BookOpen, DollarSign, TrendingUp, Award, User } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import '../styles/custom.css';
 

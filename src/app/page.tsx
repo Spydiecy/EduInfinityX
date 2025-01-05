@@ -3,14 +3,11 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getWeb3Provider, getContractFunctions } from '@/lib/contract';
-import { ethers } from 'ethers';
-import Navbar from './components/Navbar';
-import HomeM from './components/HomeMain';
 import HomeMain from './components/HomeMain';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 export default function Home() {
-    const [connecting, setConnecting] = useState(false);
+    const [, setConnecting] = useState(false);
     const router = useRouter();
 
     async function handleConnect() {
