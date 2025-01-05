@@ -1,10 +1,16 @@
 
 import { useEffect, useState } from "react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function NewsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0)
-
+useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animation duration (in ms)
+       
+      });
+    }, []);
   const news = [
     {
       date: "27/07/2024",
@@ -51,7 +57,7 @@ export default function NewsSlider() {
   return (
     <div className="max-w-7xl mx-auto px-4 my-20">
       <div className="space-y-4 mb-12">
-        <h1 className="text-5xl font-bold">Latest News</h1>
+        <h1 data-aos="fade-down"  className="text-5xl font-bold">Latest News</h1>
         <p className="text-xl text-gray-600">
           Let's catch you up on what is happening in the Edu Chain ecosystem.
         </p>

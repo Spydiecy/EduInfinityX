@@ -1,10 +1,20 @@
+"use client"
+import { useEffect } from "react";
 import edu1 from "../../../public/edu-learn1.jpg";
 import edu2 from "../../../public/edu-learn2.jpg";
 import edu3 from "../../../public/edu-learn3.jpg";
 import edu4 from "../../../public/edu-learn4.jpg";
 import edu5 from "../../../public/edulearn.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function AboutSection() {
-
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration (in ms)
+     
+    });
+  }, []);
   const partners = [
     {
       name: "Prodigy",
@@ -32,17 +42,17 @@ export default function AboutSection() {
   ]
 
   return (
-    <section className="bg-white py-24">
+    <section  className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16 space-y-4">
+        <div data-aos="fade-up" className="text-center mb-16 space-y-4">
           <div className="inline-block">
-            <div
+            <div data-aos="fade-up"
               className="w-16 h-16 rounded-full mb-4 mx-auto flex items-center justify-center"
               style={{
                 background: "linear-gradient(135deg, rgb(45, 206, 137) 0%, rgb(0, 147, 233) 100%)",
               }}
             >
-              <span className="text-2xl">❤️</span>
+              <span  className="text-2xl">❤️</span>
             </div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">To help Students</h2>
@@ -62,7 +72,7 @@ export default function AboutSection() {
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                  
                 />
-              <h1 className="text-6xl font-bold">void(0)</h1>
+              <h1 data-aos="fade-up" className="text-6xl font-bold">void(0)</h1>
               </div>
             </div>
           </div>

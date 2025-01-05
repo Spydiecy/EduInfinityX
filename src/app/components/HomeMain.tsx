@@ -1,10 +1,11 @@
 "use client"
 
+import { TypeAnimation } from "react-type-animation"
 import AboutSection from "./AboutSection"
 import CommunitySection from "./CommunitySection"
 import HomeCardsDesign from "./HomeCardsDesign"
 import NewsSlider from "./NewsSlider"
-
+import { motion } from 'framer-motion'
 export default function HomeMain() {
     return (
 <>
@@ -46,10 +47,39 @@ export default function HomeMain() {
             </div>
   
             {/* Hero Text */}
-            <p className="font-bold text-5xl lg:text-[90px] flex flex-col">
-              <span className="whitespace-nowrap">Learn. Own. Earn.</span>
-              <span>On's EduChain</span>
-            </p>
+            <div className="font-bold text-5xl lg:text-[90px] flex flex-col">
+              
+              <span className="whitespace-nowrap">  <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        
+        `Learn.Own.Earn.`,
+        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        'Learn.Own.Grow',
+        1000,
+        'Learn.Own.Succeed',
+        1000,
+        'Learn.Own.Discover',
+        1000,
+        
+      ]}
+      wrapper="span"
+      speed={50}
+      style={{ fontSize: '1em', display: 'inline-block',marginTop:'8px' }}
+      repeat={Infinity}
+    /></span>
+    
+              <motion.h1 
+          className="text-6xl font-bold  mt-8"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+            Its's EduInfinity-X
+          </span>
+        </motion.h1>
+            </div>
   
             {/* Description */}
             <p className="font-medium lg:text-lg text-[#404056] max-w-md">

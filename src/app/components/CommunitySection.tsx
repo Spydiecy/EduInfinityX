@@ -1,6 +1,16 @@
 "use client"
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function CommunitySection() {
+  
+  useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animation duration (in ms)
+       
+      });
+    }, []);
   const testimonials = [
     {
       name: "Ryan Carniato",
@@ -56,7 +66,7 @@ export default function CommunitySection() {
     <section className="bg-white py-14 ">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Loved by the community</h2>
+          <h2 data-aos="fade-up" className="text-4xl md:text-5xl font-bold mb-4">Loved by the community</h2>
           <p className="text-xl text-gray-600">
             Don't take our word for it - listen to what Vite community members have to say.
           </p>
