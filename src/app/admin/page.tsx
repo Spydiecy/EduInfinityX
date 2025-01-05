@@ -25,7 +25,7 @@ export default function AdminDashboard() {
       const init = async () => {
         const addr = localStorage.getItem('walletAddress');
         if (addr) setAddress(addr);
-          // await checkAdmin(addr)
+          await checkAdmin(addr)
         await fetchPendingLoans();
       };
         init();

@@ -48,7 +48,7 @@ export default function RootLayout({
         {children}
        
       <Footer></Footer>
-    
+  <ChatbotIntegration></ChatbotIntegration>
 
         </body>
         
