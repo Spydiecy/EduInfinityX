@@ -2,6 +2,7 @@ import { Toaster } from 'react-hot-toast'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './globals.css'
+import ChatbotIntegration from './ChatBot'
 
 export const metadata = {
   title: 'EduInfinity-X',
@@ -45,8 +46,12 @@ export default function RootLayout({
 
       <Navbar></Navbar>
         {children}
+       
       <Footer></Footer>
+    
+
         </body>
+        
     </html>
   )
 }
