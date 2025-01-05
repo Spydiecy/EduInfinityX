@@ -200,7 +200,7 @@ import ConnectWallet from './ConnectWallet';
                     <span className="sr-only">GitHub</span>
                   </a>
                   <a
-                    href="#"
+                    href="https://x.com/EduInfinityX/status/1875875913042477271"
                     className="text-neutral-400 transition-colors hover:text-green-400 hover:[text-shadow:0_0_10px_#c084fc]"
                   >
                     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

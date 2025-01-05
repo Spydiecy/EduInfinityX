@@ -66,7 +66,7 @@ export default function Footer() {
 
   const footerLinks = {
     "Our Features": [{"name":"Request Loans","href":"/loan-request"}, {"name":"Stake","href":"/stake-loans"}, {"name":"Repayment Loans","href":"/repayment-loan"},],
-    "Developers": [{"name":"Twitter","href":"/"}, {"name":"Github","href":"https://github.com/Spydiecy/EduInfinityX/blob/main/README.md"} ],
+    "Developers": [{"name":"Twitter","href":"https://x.com/EduInfinityX/status/1875875913042477271"}, {"name":"Github","href":"https://github.com/Spydiecy/EduInfinityX/blob/main/README.md"} ],
     "Company": [{"name":"About Us","href":"/about"}, {"name":"Contact us","href":"/contact"}],
    
   }
