@@ -5,6 +5,7 @@
   import { useRouter } from 'next/navigation';
   import toast from 'react-hot-toast';
 import { SearchBar } from './Searchbar';
+import ConnectWallet from './ConnectWallet';
 
   export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -80,10 +81,10 @@ import { SearchBar } from './Searchbar';
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-6">
                 <a
-                  href="/admin"
+                  href="/"
                   className="text-lg text-neutral-300 transition-colors hover:text-green-400 hover:[text-shadow:0_0_10px_#c084fc]"
                 >
-                  Admin
+                  Home
                 </a>
                 <a
                   href="/loan-request"
@@ -177,17 +178,12 @@ import { SearchBar } from './Searchbar';
                         Contact
                       </a>
                       <a
-                        href="#"
+                        href="/chatbot"
                         className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
                       >
-                        Team
+                        Chatbot
                       </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-lg text-neutral-300 hover:bg-neutral-800 hover:text-green-400"
-                      >
-                        Release Notes
-                      </a>
+                      
                     </div>
                   )}
                 </div>
@@ -195,7 +191,7 @@ import { SearchBar } from './Searchbar';
                 {/* Social Links */}
                 <div className="flex items-center space-x-4 border-l border-neutral-800 pl-6">
                   <a
-                    href="#"
+                    href="https://github.com/Spydiecy/EduInfinityX"
                     className="text-neutral-400 transition-colors hover:text-green-400 hover:[text-shadow:0_0_10px_#c084fc]"
                   >
                     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -213,19 +209,7 @@ import { SearchBar } from './Searchbar';
                     <span className="sr-only">Twitter</span>
                   </a>
               
-                  <button
-                  style={{
-                    background: "linear-gradient(135deg, rgb(45, 206, 137) 0%, rgb(0, 147, 233) 100%)",
-                  }}
-                    onClick={handleConnect}
-                    className="rounded-md  px-4 py-1.5 text-base font-medium text-white transition-colors  hover:[text-shadow:0_0_10px_#fff]"
-                  >
-                    {isConnecting
-                      ? 'Connecting...'
-                      : account
-                      ? `${account.slice(0, 6)}...${account.slice(-4)}`
-                      : 'Connect Wallet'}
-                  </button>
+                  <ConnectWallet></ConnectWallet>
                 </div>
               </div>
             </div>
