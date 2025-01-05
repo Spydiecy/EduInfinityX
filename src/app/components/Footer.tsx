@@ -66,7 +66,7 @@ export default function Footer() {
 
   const footerLinks = {
     "Our Features": [{"name":"Request Loans","href":"/loan-request"}, {"name":"Stake","href":"/stake-loans"}, {"name":"Repayment Loans","href":"/repayment-loan"},],
-    "Developers": [{"name":"Twitter","href":"/"}, {"name":"Github","href":"https://github.com/Spydiecy/EduInfinityX/blob/main/README.md"}, {"name":"SDK","href":"https://educhain.xyz/"}, ],
+    "Developers": [{"name":"Twitter","href":"/"}, {"name":"Github","href":"https://github.com/Spydiecy/EduInfinityX/blob/main/README.md"} ],
     "Company": [{"name":"About Us","href":"/about"}, {"name":"Contact us","href":"/contact"}],
    
   }
@@ -163,9 +163,22 @@ export default function Footer() {
     
   </div>
   <div  className="space-y-6">
-    <h3 className="text-sm font-semibold uppercase tracking-wider">Our Features</h3>
+    <h3 className="text-sm font-semibold uppercase tracking-wider">Socials</h3>
     <ul className="space-y-4" > {/* Add a unique key here */}
       {footerLinks["Developers"].map(({ name, href }) => (
+        <li key={href}>
+          <a href={href} className="text-gray-600 hover:text-emerald-400 transition-colors">
+            {name}
+          </a>
+        </li>
+      ))}
+    </ul>
+    
+  </div>
+  <div  className="space-y-6">
+    <h3 className="text-sm font-semibold uppercase tracking-wider">About</h3>
+    <ul className="space-y-4" > {/* Add a unique key here */}
+      {footerLinks["Company"].map(({ name, href }) => (
         <li key={href}>
           <a href={href} className="text-gray-600 hover:text-emerald-400 transition-colors">
             {name}

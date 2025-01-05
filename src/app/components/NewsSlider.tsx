@@ -53,7 +53,7 @@ export default function NewsSlider() {
       <div className="space-y-4 mb-12">
         <h1 className="text-5xl font-bold">Latest News</h1>
         <p className="text-xl text-gray-600">
-          Let's catch you up on what is happening in the Neo X ecosystem.
+          Let's catch you up on what is happening in the Edu Chain ecosystem.
         </p>
       </div>
 

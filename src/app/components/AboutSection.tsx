@@ -47,7 +47,7 @@ export default function AboutSection() {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">To help Students</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Our platform is MIT Licensed 
+            Our platform is Powered by EduChain.
             This is made possible by our contributors and these companies:
           </p>
         </div>

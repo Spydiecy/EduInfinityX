@@ -48,12 +48,12 @@ export default function HomeMain() {
             {/* Hero Text */}
             <p className="font-bold text-5xl lg:text-[90px] flex flex-col">
               <span className="whitespace-nowrap">Learn. Own. Earn.</span>
-              <span>It's EduChain</span>
+              <span>On's EduChain</span>
             </p>
   
             {/* Description */}
             <p className="font-medium lg:text-lg text-[#404056] max-w-md">
-            A Layer 3 platform built on Arbitrum Orbit, that's home to DApps spanning learning, DeFi, education finance, for education loans to institutions. </p>
+            EduInfinity-X is a transformative platform designed to redefine education financing and management by leveraging blockchain and artificial intelligence (AI). </p>
   
             {/* CTA Button */}
             <div className="flex items-center gap-8">
