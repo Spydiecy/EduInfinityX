@@ -131,7 +131,7 @@ export default function Footer() {
 
               </div>
             <p className="text-gray-600 max-w-xs">
-              Building the future of blockchain technology with Neo X ecosystem.
+              Building the future of blockchain technology with Edu Chain ecosystem.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (

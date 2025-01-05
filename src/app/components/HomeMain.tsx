@@ -105,7 +105,7 @@ export default function HomeMain() {
         <div className="absolute top-0 lg:right-0 -right-40 translate-x-1/2 lg:translate-x-0 lg:flex z-10">
           <img 
             src="https://x.neo.org/assets/hero-x.png" 
-            alt="Neo X Hero"
+            alt="Edu Chain"
             className="h-[740px] lg:h-[1065px]"
           />
         </div>
